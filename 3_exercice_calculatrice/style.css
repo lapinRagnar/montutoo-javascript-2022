@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#num1-el {
+    background: rgb(79, 72, 172);
+    margin: 0 auto;
+}
+
+#num2-el {
+    background: rgb(116, 54, 97);
+    margin: 0 auto;
+}
+
+button{
+    background: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    cursor: pointer;
+}
+
