@@ -1,0 +1,14 @@
+img{
+    width: 100px;
+}
+
+button{
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(103, 218, 128, 0.37);
+}
+
+#erreur{
+    background: rgb(212, 75, 75);
+    width: 200px;
+}
