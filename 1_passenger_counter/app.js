@@ -1,22 +1,25 @@
-element = document.getElementById("count-el")
+let element = document.getElementById("count-el")
+let saveEl = document.getElementById("save-el")
 
 let count = 0
 let message = "ceci est une notification!"
 
-element.innerHTML = "Nombre de gens = " + count
+element.innerHTML = count
 
-const increment = () => {
-    count += 1
-    console.log(count);
-    element.innerHTML = "Nombre de gens = " + count
+function increment() {
+    count += 1    
+    element.innerHTML = count
 }
 
-const decrement= () => {
+function decrement() {
     count -= 1
-    element.innerHTML = "Nombre de gens = " + count
+    element.innerHTML = count
 }
 
-const enregistrer = () => {
-    console.log('marche');
+console.log(count);
+
+function enregistrer() {
+    let countStr = count + " - "
+    saveEl.textContent += countStr
 }
 
