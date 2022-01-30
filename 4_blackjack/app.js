@@ -42,6 +42,7 @@ newCard = () => {
     console.log("ok");
     card = 7
     sum += card
+    cards.push(card)
     renderGame()
 }
 
