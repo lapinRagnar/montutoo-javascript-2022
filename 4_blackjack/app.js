@@ -4,18 +4,32 @@
 - creer une variable sum pour les 2 valeurs
 */
 
-firstCard = 6
-secondCard = 9
-cards = [firstCard, secondCard]
-sum = firstCard + secondCard
+player = {
+    name: "Moi-meme",
+    chips: 145
+}
+firstCard = getRandomCard()
+secondCard = getRandomCard()
+cards = []
+sum = 0
 hasBlackjack = false
-isAlive = true
+isAlive = false
 message = ""
 messageEl = document.getElementById('message-el')
 sumEl = document.querySelector('#sum-el')
 cardsEl = document.getElementById('cards-el')
 
+
+
+playerEl = document.getElementById('player-el')
+playerEl.textContent = player.name + ": " + player.chips +" €"
+
 startGame = () => {
+    isAlive = true
+    firstCard = getRandomCard()
+    secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 
@@ -38,16 +52,31 @@ renderGame = () => {
         isAlive = false
     }
     
-    console.log(message);
     messageEl.textContent = message
 }
 
 newCard = () => {
-    console.log("ok");
-    card = 7
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (isAlive === true && hasBlackjack === false){
+        card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
+
+}
+
+function getRandomCard() {
+    // en blackjack:
+    // si le nombre aléaroire = 1, on return 11
+    // si 11, 12, 13, on retourne 10
+    randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber = 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
 }
 
 
