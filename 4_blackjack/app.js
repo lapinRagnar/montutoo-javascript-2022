@@ -22,7 +22,11 @@ startGame = () => {
 renderGame = () => {
 
     sumEl.textContent = "sum: " + sum
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1]
+    cardsEl.textContent = "Cards: " 
+
+    for (i=0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
 
     if ( sum <= 20 ) {
         message = "est-ce que tu veux une autre carte?? 😇"
