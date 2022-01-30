@@ -32,3 +32,7 @@ button{
     cursor: pointer;
     font-weight: bold;
 }
+
+.grand-titre{
+    margin-top: 50px;
+}
