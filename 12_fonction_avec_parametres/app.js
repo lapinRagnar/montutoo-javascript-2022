@@ -1,9 +1,9 @@
 welcomeEl = document.getElementById('welcome-el')
 
-function greetUser(name){
-    welcomeEl.textContent = 'Re bonjour, monsieur le developpeur '+ name + ' 👏'
+function greetUser(salutation, name, emoji){
+    welcomeEl.textContent = `Re ${salutation}, monsieur le developpeur ${name} ${emoji} `
 }
 
-greetUser("bitro de bitro b")
+greetUser("bonjour", "bitro de bitro b", '👏')
 
 
