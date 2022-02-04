@@ -4,6 +4,8 @@ inputBtn = document.getElementById('input-btn')
 ulEl = document.getElementById('ul-el')
 
 
+leadsFromLocalStorage = JSON.parse((localStorage.getItem('myLeads')))
+console.log(leadsFromLocalStorage);
 
 inputBtn.addEventListener('click', () => {
     myLeads.push(inputEl.value)
