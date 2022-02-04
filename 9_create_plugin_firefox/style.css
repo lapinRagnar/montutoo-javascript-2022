@@ -14,3 +14,28 @@ html, body{
     color: white;
     font-weight: bold;
 }
+
+input{
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 4px solid rgb(224, 97, 129);
+    margin-bottom: 4px;
+}
+
+button{
+    background: rgb(54, 197, 126);
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid rgb(145, 214, 182);
+    font-weight: bold;
+}
+
+input-btn{
+
+}
+
+#delete-btn{
+    background: transparent;
+    color: coral;
+}
