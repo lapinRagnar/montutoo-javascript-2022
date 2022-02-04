@@ -7,3 +7,17 @@ function greetUser(salutation, name, emoji){
 greetUser("bonjour", "bitro de bitro b", '👏')
 
 
+// fonction qui ajoute 2 nombres et retourne la somme
+// console.log(add(3, 4));          doit retourner 7
+// console.log(add(9, 102));        doit retourner 111
+
+function add(a, b) {
+    return a + b
+}
+
+console.log(add(3, 4));
+console.log(add(9, 102));
+
+
+
+add()
