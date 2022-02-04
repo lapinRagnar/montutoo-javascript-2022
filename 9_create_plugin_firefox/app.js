@@ -1,13 +1,16 @@
 myLeads = []
 inputEl = document.getElementById('input-el')
 inputBtn = document.getElementById('input-btn')
-
 ulEl = document.getElementById('ul-el')
+
+
 
 inputBtn.addEventListener('click', () => {
     myLeads.push(inputEl.value)
     renderLeads()
     inputEl.value = ""
+    localStorage.setItem('myLeads', JSON.stringify(myLeads))
+    console.log(localStorage.getItem('myLeads'));
 })
 
 renderLeads = ()=>{
@@ -17,7 +20,7 @@ renderLeads = ()=>{
         // listItems += "<li> <a href='' target='_blank'>" + myLeads[i] + " </a> </li>"
         listItems += `
             <li> 
-                <a href='#' target='_blank'>" ${myLeads[i]} " </a> 
+                <a href='#' target='_blank'> ${myLeads[i]}  </a> 
             </li>
         `
     }
